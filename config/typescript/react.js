@@ -16,6 +16,7 @@ module.exports = {
   },
   settings: {
     react: {
+      // 检测react版本
       version: "detect",
     },
     "import/parsers": {
