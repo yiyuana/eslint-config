@@ -60,6 +60,6 @@ eslint-plugin-react-native -D
 ```
 // .eslintrc.js
 module.exports = {
-  extends: ["@yiyuana/eslint-config/react"]
+  extends: ["@yiyuana/eslint-config/react-native"]
 };
 ```

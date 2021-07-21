@@ -1,13 +1,14 @@
 module.exports = {
-  plugins: ["prettier"],
   env: {
     browser: true,
     es2021: true,
   },
-  extends: ["airbnb-base", "prettier"],
+  extends: ['./react-native'],
   parserOptions: {
     ecmaVersion: 12,
-    sourceType: "module",
+    sourceType: 'module',
   },
-  rules: {},
+  rules: {
+    // 'comma-dangle': ['error', 'only-multiline'],
+  },
 };

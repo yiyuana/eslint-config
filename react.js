@@ -1,7 +1,8 @@
-const javascriptReactConfig = require("./config/javascript/react");
-const typescriptReactConfig = require("./config/typescript/default");
+const javascriptReactConfig = require('./overrides/javascript/react');
+const typescriptReactConfig = require('./overrides/typescript/react');
 
 module.exports = {
-  extends: ["./index"],
+  extends: ['./index'],
   overrides: [javascriptReactConfig, typescriptReactConfig],
+  rules: {},
 };

@@ -1,8 +1,11 @@
-const javascriptConfig = require("./config/javascript/default");
-const typescriptConfig = require("./config/typescript/default");
+const javascriptConfig = require('./overrides/javascript/default');
+const typescriptConfig = require('./overrides/typescript/default');
 
 module.exports = {
-  extends: ["plugin:prettier/recommended"],
+  /**
+   * 启用eslint-plugin-prettier和eslint-config-prettier，使编辑器显示错误提示，确保这项是扩展数组中的最后一个配置
+   */
+  extends: ['plugin:prettier/recommended'],
   /**
    * 指定想启用的环境为es6
    */
@@ -10,8 +13,8 @@ module.exports = {
     es6: true,
   },
   parserOptions: {
-    ecmaVersion: 2021, // 指定你想要使用的 ECMAScript 版本
-    sourceType: "module", // 可以设置为设置为 "script" (默认) 或 "module"
+    ecmaVersion: 2020, // 指定你想要使用的 ECMAScript 版本
+    sourceType: 'module', // 可以设置为设置为 "script" (默认) 或 "module"
     /**
      * 想使用的额外的语言特性
      */

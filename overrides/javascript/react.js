@@ -5,11 +5,13 @@
 // "off" or 0 - 关闭规则
 // "warn" or 1 - 将规则视为一个警告（不会影响退出码）
 // "error" or 2 - 将规则视为一个错误 (退出码为1)
+const javascriptRule = require('../rules/javascript');
+const reactRule = require('../rules/react');
 
 module.exports = {
-  files: ["*.jsx"],
-  extends: ["airbnb", "airbnb/hooks", "prettier", "prettier/react"],
-  parser: "babel-eslint",
+  files: ['*.jsx'],
+  extends: ['airbnb', 'airbnb/hooks', 'plugin:react/recommended', 'prettier'],
+  parser: 'babel-eslint',
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
@@ -17,8 +19,11 @@ module.exports = {
   },
   settings: {
     react: {
-      version: "detect",
+      version: 'detect',
     },
   },
-  rules: {},
+  rules: {
+    ...javascriptRule,
+    ...reactRule,
+  },
 };
