@@ -9,9 +9,13 @@ module.exports = {
     'prettier',
   ],
   parser: '@typescript-eslint/parser',
+  rules: {
+    ...javascriptRule,
+    ...typescriptRule,
+  },
   settings: {
     'import/parsers': {
-      '@typescript-eslint/parser': ['.ts', '.tsx'],
+      '@typescript-eslint/parser': ['.ts', '.tsx', '.d.ts'],
     },
     'import/resolver': {
       // 默认使用根目录 tsconfig.json
@@ -22,9 +26,5 @@ module.exports = {
         alwaysTryTypes: true, // always try to resolve types under `<root>@types` directory even it doesn't contain any source code, like `@types/unist`
       },
     },
-  },
-  rules: {
-    ...javascriptRule,
-    ...typescriptRule,
   },
 };

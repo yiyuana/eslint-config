@@ -1,4 +1,5 @@
 module.exports = {
+  'no-unused-vars': 0,
   '@typescript-eslint/no-empty-interface': 1,
   '@typescript-eslint/no-empty-function': 1,
   // '@typescript-eslint/explicit-module-boundary-types': 0,
