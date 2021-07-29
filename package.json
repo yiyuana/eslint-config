@@ -1,6 +1,6 @@
 {
-  "name": "@yiyuana/eslint-config",
-  "version": "1.0.2",
+  "name": "@yiyuana/eslint-config-emo",
+  "version": "1.0.1",
   "description": "personal eslint config",
   "main": "index.js",
   "scripts": {

@@ -4,13 +4,7 @@ const reactRule = require('../rules/react');
 
 module.exports = {
   files: ['*.tsx'],
-  extends: [
-    'airbnb',
-    'airbnb/hooks',
-    'plugin:react/recommended',
-    'plugin:@typescript-eslint/recommended',
-    'prettier',
-  ],
+  extends: ['airbnb', 'airbnb/hooks', 'plugin:@typescript-eslint/recommended', 'prettier'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
@@ -23,7 +17,7 @@ module.exports = {
       version: 'detect',
     },
     'import/parsers': {
-      '@typescript-eslint/parser': ['.tsx', '.ts'],
+      '@typescript-eslint/parser': ['.ts', '.tsx'],
     },
     'import/resolver': {
       // 配置见https://www.npmjs.com/package/eslint-import-resolver-typescript
